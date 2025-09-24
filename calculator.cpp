@@ -1,16 +1,11 @@
 // В этом файле определения функций.
 // За основу возьмите решение предыдущей задачи.
-//  Функция ReadNumber, которая будет читать число и выводить сообщение об
-//  ошибке в std::cerr в случае неудачи. Функция RunCalculatorCycle, которая
-//  будет содержать всю логику калькулятора.
+
 #include "calculator.h"
 #include <iostream>
 #include <math.h>
 
 using Number = double;
-
-// Возвращает true, если удалось прочитать число
-// и сохранить его в Number.
 
 bool ReadNumber(Number &result) {
 
@@ -38,21 +33,23 @@ bool DoOperation(Number &cur_sum, Number &left, Number &right, Number &saved,
         return false;
     } else if (operation == 'c') {
         saved = 0;
+        return true;
     } else if (operation == 's') {
         saved = cur_sum;
+        return true;
     } else if (operation == 'l') {
         cur_sum = saved;
+        return true;
     } else if (operation == ':') {
         std::cin >> cur_sum;
+        return true;
     } else if (operation == '*') {
         char ch;
         std::cin >> ch;
         if (ch == '*') {
             is_pow = true;
         }
-    }
-
-    if (operation == '=') {
+    } else if (operation == '=') {
         cur_sum += left;
         left = 0;
         std::cout << cur_sum << std::endl;
@@ -84,8 +81,6 @@ bool DoOperation(Number &cur_sum, Number &left, Number &right, Number &saved,
     return true;
 }
 
-// Возвращает true, если работа завершилась штатно
-// командой q. Если из-за ошибки, возвращает false.
 bool RunCalculatorCycle() {
 
     Number saved = 0;
