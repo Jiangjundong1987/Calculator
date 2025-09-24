@@ -9,7 +9,10 @@ add_executable(Calculator main.cpp
     calculator.cpp
     calculator.h
     main.cpp
-    README.md)
+    README.md
+
+
+)
 
 include(GNUInstallDirs)
 install(TARGETS Calculator
