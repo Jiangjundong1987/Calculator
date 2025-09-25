@@ -121,7 +121,6 @@ bool RunCalculatorCycle() {
     Number cur_sum = 0;
     Number right = 0;
     bool is_saved = false;
-    char cmd;
     bool checked;
 
     checked = ReadNumber(cur_sum);
