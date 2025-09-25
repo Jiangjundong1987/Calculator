@@ -7,7 +7,6 @@
 
 using Number = double;
 
-
 bool ReadNumber(Number &result) {
 
     Number n;
@@ -47,6 +46,7 @@ bool DoOperation(Number &cur_sum, Number &right, Number &saved, bool &checked,
         return false;
     } else if (operation == 'c') {
         saved = 0;
+        cur_sum = 0;
         return true;
     } else if (operation == 's') {
         saved = cur_sum;
@@ -54,10 +54,11 @@ bool DoOperation(Number &cur_sum, Number &right, Number &saved, bool &checked,
         return true;
     } else if (operation == 'l') {
         if (!is_saved) {
-            std::cout << "Error: Memory is empty" << std::endl;
+            std::cerr << "Error: Memory is empty" << std::endl;
+            return false;
+        } else {
+            cur_sum = saved;
         }
-        cur_sum = saved;
-        std::cout << cur_sum << std::endl;
         return true;
     } else if (operation == ':') {
         checked = ReadNumber(cur_sum);
