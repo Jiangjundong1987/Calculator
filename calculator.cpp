@@ -60,7 +60,7 @@ bool DoOperation(Number &cur_sum, Number &right, Number &saved, bool &checked,
         std::cout << cur_sum << std::endl;
         return true;
     } else if (operation == ':') {
-        RunCalculatorCycle();
+        checked = ReadNumber(cur_sum);
         return true;
     } else if (operation == '=') {
         std::cout << cur_sum << std::endl;
