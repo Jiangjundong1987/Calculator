@@ -1,7 +1,0 @@
-/home/jiang/Education/cpp/YP/Calculator/build/gcccmake-Debug/CMakeFiles/Calculator.dir
-/home/jiang/Education/cpp/YP/Calculator/build/gcccmake-Debug/CMakeFiles/edit_cache.dir
-/home/jiang/Education/cpp/YP/Calculator/build/gcccmake-Debug/CMakeFiles/rebuild_cache.dir
-/home/jiang/Education/cpp/YP/Calculator/build/gcccmake-Debug/CMakeFiles/list_install_components.dir
-/home/jiang/Education/cpp/YP/Calculator/build/gcccmake-Debug/CMakeFiles/install.dir
-/home/jiang/Education/cpp/YP/Calculator/build/gcccmake-Debug/CMakeFiles/install/local.dir
-/home/jiang/Education/cpp/YP/Calculator/build/gcccmake-Debug/CMakeFiles/install/strip.dir
